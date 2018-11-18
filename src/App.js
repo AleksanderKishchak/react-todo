@@ -23,7 +23,7 @@ class App extends Component {
       })
       .catch(e => {
         console.warn(`Errors with API: ${e.code} ${e.message}`);
-      })
+      });
   }
 
   removeItem = index => {
