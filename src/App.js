@@ -23,7 +23,7 @@ class App extends Component {
       })
       .catch(e => {
         console.warn(`Errors with API: ${e.code} ${e.message}`);
-      })
+      });
   }
 
   removeItem = index => {
@@ -53,7 +53,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <Form 
           addItem={this.addItem}
         />
@@ -62,8 +62,8 @@ class App extends Component {
           removeItem={this.removeItem}
           checkItem={this.checkItem}
         />
-      </>
-    )
+      </div>
+    );
   }
 }
 
